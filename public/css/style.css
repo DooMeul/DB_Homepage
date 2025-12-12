@@ -1,0 +1,96 @@
+/* Modern, clean global styles for Portfolio Hub */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+	--bg: #f6f7fb;
+	--card: #ffffff;
+	--muted: #6c757d;
+	--accent: #5b6cff; /* primary accent */
+	--accent-2: #9b6bff;
+	--radius: 14px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+	margin:0;
+	background:linear-gradient(180deg,var(--bg),#fbfbff);
+	font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	color:#222;
+	-webkit-font-smoothing:antialiased;
+}
+
+.container{max-width:1100px}
+
+/* Navbar */
+.navbar{background:transparent}
+.navbar-light .navbar-brand{color:#111;font-weight:700}
+.navbar .btn{border-radius:10px}
+
+/* Cards */
+.card{
+	border:0;
+	border-radius:var(--radius);
+	background:var(--card);
+	box-shadow: 0 10px 30px rgba(34,40,50,0.06);
+}
+.card .card-body{padding:1.4rem}
+
+/* Hero area for cards */
+.portfolio-hero{
+	height:140px;
+	border-radius:10px;
+	background: linear-gradient(135deg, rgba(91,108,255,0.12), rgba(155,107,255,0.08));
+	display:flex;align-items:flex-end;padding:12px;position:relative;overflow:hidden
+}
+.portfolio-hero .hero-title{color:#fff;font-weight:700;text-shadow:0 6px 18px rgba(0,0,0,0.2);font-size:1rem}
+.portfolio-hero--large{height:260px;border-radius:14px;display:flex;align-items:center;justify-content:center}
+.portfolio-hero--large .hero-title{font-size:1.8rem}
+
+/* Typography */
+.h1,.h2,.h3{font-weight:700}
+.text-muted{color:var(--muted)!important}
+
+/* Badges */
+.badge{border-radius:999px;padding:0.4em 0.6em;font-size:0.82rem;background:linear-gradient(90deg,#f6f8ff,#fff7fb);color:#2b2b6b;margin-right:6px}
+
+/* Buttons */
+.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:0}
+.btn-outline-primary{color:var(--accent);border-color:rgba(91,108,255,0.12)}
+
+/* Card hover */
+.card{transition:transform .25s ease, box-shadow .25s ease}
+.card:hover{transform:translateY(-8px);box-shadow:0 28px 60px rgba(34,40,50,0.12)}
+
+/* Detail page */
+.portfolio-description{font-size:1.05rem;line-height:1.8;color:#2b2b2b;margin-bottom:1rem;white-space:pre-wrap}
+.tech-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.link-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.owner-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+
+/* Utilities */
+.text-truncate{display:block;overflow:hidden}
+
+/* Section titles & spacing for show page */
+.section-title{
+	font-size:1rem;
+	font-weight:600;
+	color:#222;
+	margin-bottom:0.5rem;
+}
+
+/* Remove heavy hr visuals sitewide (use spacing instead) */
+hr{border:0;height:0;display:block;margin:0;padding:0}
+
+/* Make buttons consistent without emoji labels */
+.btn-sm{font-size:0.9rem}
+
+/* Meta row for dates, category */
+.meta-row{display:flex;gap:16px;justify-content:center;color:var(--muted);font-size:0.95rem;margin-bottom:0.75rem}
+.meta-row .meta-item{display:inline-block}
+
+
+
+/* Responsive tweaks */
+@media (min-width:992px){.container{max-width:1100px}}
+
